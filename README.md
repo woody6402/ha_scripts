@@ -1,5 +1,8 @@
 # ha_scripts
 some scripts for home assistant usable via command_line.yaml
+please beware, that are quick code snippets to retrieve some interesting values, not improved and not secured, as base for personal adaptations
+
+In my configuration all scripts are located in myscripts.
 
 - NÖ air quality
 ```
@@ -13,7 +16,7 @@ some scripts for home assistant usable via command_line.yaml
     value_template: "{{ value_json.state }}"
     scan_interval: 900  # Update interval in seconds
 ```
-- water level for different rivers
+- water level for different Lower Austrian rivers measured on different locations.
 ```
 # Stationsname: Cholerakapelle, Stationsnummer:208090
   - sensor:
