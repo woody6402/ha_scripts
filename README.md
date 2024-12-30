@@ -1,6 +1,7 @@
 # ha_scripts
 some scripts for home assistant usable via command_line.yaml
 
+```
 # Sensor for NÖ (Lower Austria) air quality
 - sensor:
     name: "Air Quality"
@@ -9,3 +10,4 @@ some scripts for home assistant usable via command_line.yaml
       - attributes
     value_template: "{{ value_json.state }}"
     scan_interval: 900  # Update interval in seconds
+```
