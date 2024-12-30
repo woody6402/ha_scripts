@@ -29,3 +29,13 @@ In my configuration all scripts are located in myscripts.
     json_attributes:
       time: "{{ value.split(';')[0] | trim }}"  # Extracts the first value (timestamp)
 ```
+- Baden Wasser quality
+```
+- sensor:
+    name: "Water Quality"
+    command: "python /config/myscripts/getBadenWasser1.py"
+    json_attributes:
+      - attributes
+    value_template: "{{ value_json.state }}"
+    scan_interval: 36000  # Update interval in seconds
+```
