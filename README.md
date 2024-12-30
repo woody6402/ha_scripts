@@ -3,6 +3,7 @@ some scripts for home assistant usable via command_line.yaml
 
 ```
 # Sensor for NÖ (Lower Austria) air quality
+# http://numbis.noe.gv.at/Numbis/aktuelledaten.jsp
 - sensor:
     name: "Air Quality"
     command: "python /config/myscripts/getNOELuft.py 'Bad Vöslau'"
