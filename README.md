@@ -29,7 +29,7 @@ In my configuration all scripts are located in myscripts.
     json_attributes:
       time: "{{ value.split(';')[0] | trim }}"  # Extracts the first value (timestamp)
 ```
-- Baden Wasser quality
+- Baden water quality
 ```
 - sensor:
     name: "Water Quality"
@@ -39,7 +39,7 @@ In my configuration all scripts are located in myscripts.
     value_template: "{{ value_json.state }}"
     scan_interval: 36000  # Update interval in seconds
 ```
-- Pegelstand Kärnten (yaml config ungetestet, script funktioniert)
+- water level Kärnten (yaml config untestet, script is working)
 ```
 - sensor:
     - name: "Pegelstand KW Edling"
