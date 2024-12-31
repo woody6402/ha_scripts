@@ -39,7 +39,7 @@ In my configuration all scripts are located in myscripts.
     value_template: "{{ value_json.state }}"
     scan_interval: 36000  # Update interval in seconds
 ```
-- Pegelstand Kärntnen
+- Pegelstand Kärnten
 ```
 python getPegelKaernten.py  Edling
 ```
