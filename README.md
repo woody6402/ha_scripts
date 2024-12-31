@@ -39,7 +39,35 @@ In my configuration all scripts are located in myscripts.
     value_template: "{{ value_json.state }}"
     scan_interval: 36000  # Update interval in seconds
 ```
-- Pegelstand Kärnten
+- Pegelstand Kärnten (yaml config ungetestet, script funktioniert)
 ```
-python getPegelKaernten.py  Edling
+- sensor:
+    - name: "Pegelstand KW Edling"
+      command: "python /config/myscripts/getPegelKaernten.py Edling"
+      value_template: "{{ value_json.level }}"
+      json_attributes:
+        - bs
+        - datum
+        - einzugsgebiet
+        - gewasser
+        - group
+        - hq1
+        - hq10
+        - hq100
+        - hq30
+        - hq300
+        - hq5
+        - metrics
+        - mjnqt
+        - mq
+        - nqkrit
+        - nqt
+        - pegelnullpunkt
+        - rhhq
+        - station
+        - stationsbetreiber
+        - stationsnummer
+        - webgrafik
+      scan_interval: 3600
+
 ```
