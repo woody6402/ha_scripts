@@ -29,15 +29,46 @@ In my configuration all scripts are located in myscripts.
     json_attributes:
       time: "{{ value.split(';')[0] | trim }}"  # Extracts the first value (timestamp)
 ```
-- Baden water quality
+- Baden water quality (see package waterq.yaml)
 ```
-- sensor:
-    name: "Water Quality"
-    command: "python /config/myscripts/getBadenWasser1.py"
-    json_attributes:
-      - attributes
-    value_template: "{{ value_json.state }}"
-    scan_interval: 36000  # Update interval in seconds
+command_line:
+  - sensor:
+      name: "Wasserwerte Baden (CLI Rohdaten)"
+      unique_id: wasserwerte_baden_cli_rohdaten
+      command: "curl -sSL 'https://raw.githubusercontent.com/woody6402/ha_scripts/main/myscripts/baden_wasserwerte.json'"
+      scan_interval: 86400
+      value_template: "{{ value_json.Probe.ProbenahmeDatum }}"
+      json_attributes_path: "$.Messwerte"
+      json_attributes:
+        - Wassertemperatur
+        - pH_Wert
+        - Leitfähigkeit
+        - Färbung
+        - Geruch
+        - Geschmack
+        - Gesamthärte_mmol_l
+        - Gesamthärte_dH
+        - Carbonathärte
+        - Säurekapazität_bis_pH_4_3
+        - Hydrogencarbonat
+        - Calcium_Ca
+        - Magnesium_Mg
+        - NPOC
+        - Nitrat
+        - Nitrit
+        - Ammonium
+        - Chlorid_Cl
+        - Sulfat
+        - Eisen_Fe
+        - Mangan_Mn
+        - Natrium_Na
+        - Kalium_K
+        - Koloniebildende_Einheiten_22C
+        - Koloniebildende_Einheiten_37C
+        - Escherichia_coli
+        - Coliforme_Bakterien
+        - Intestinale_Enterokokken
+
 ```
 - water level Kärnten (yaml config untestet, script is working)
 ```
