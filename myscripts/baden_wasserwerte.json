@@ -1,0 +1,136 @@
+{
+  "Probe": {
+    "ProbenahmeDatum": "25.11.2025",
+    "ProbenahmeZeit": "11:10",
+    "Probenahmestelle": "13. Ortsnetz Ortszone West, Bereich Friedrichstraße/Radetzkystraße",
+    "EntnahmestelleBeschreibung": "Wasserhahn im Kindergarten"
+  },
+  "Messwerte": {
+    "Wassertemperatur": {
+      "wert": 11.3,
+      "einheit": "°C"
+    },
+    "pH_Wert": {
+      "wert": 7.6,
+      "einheit": ""
+    },
+    "Leitfähigkeit": {
+      "wert": 487,
+      "einheit": "µS/cm"
+    },
+    "Färbung": {
+      "wert": "farblos, klar",
+      "einheit": ""
+    },
+    "Geruch": {
+      "wert": "nicht auffallend",
+      "einheit": ""
+    },
+    "Geschmack": {
+      "wert": "nicht auffallend",
+      "einheit": ""
+    },
+    "Gesamthärte_mmol_l": {
+      "wert": 2.57,
+      "einheit": "mmol/l"
+    },
+    "Gesamthärte_dH": {
+      "wert": 14.5,
+      "einheit": "°dH"
+    },
+    "Carbonathärte": {
+      "wert": 12.2,
+      "einheit": "°dH"
+    },
+    "Säurekapazität_bis_pH_4_3": {
+      "wert": 4.4,
+      "einheit": "mmol/l"
+    },
+    "Hydrogencarbonat": {
+      "wert": 262.7,
+      "einheit": "mg/l"
+    },
+    "Calcium_Ca": {
+      "wert": 75.9,
+      "einheit": "mg/l"
+    },
+    "Magnesium_Mg": {
+      "wert": 16.6,
+      "einheit": "mg/l"
+    },
+    "NPOC": {
+      "wert": 0.33,
+      "einheit": "mg/l"
+    },
+    "Nitrat": {
+      "wert": 8.2,
+      "einheit": "mg/l",
+      "grenzwert_max": 50
+    },
+    "Nitrit": {
+      "wert": "<0.020",
+      "einheit": "mg/l",
+      "grenzwert_max": 0.10
+    },
+    "Ammonium": {
+      "wert": "<0.040",
+      "einheit": "mg/l",
+      "grenzwert_max": 0.50
+    },
+    "Chlorid_Cl": {
+      "wert": 18,
+      "einheit": "mg/l",
+      "grenzwert_max": 200
+    },
+    "Sulfat": {
+      "wert": 44,
+      "einheit": "mg/l",
+      "grenzwert_max": 250
+    },
+    "Eisen_Fe": {
+      "wert": "<0.0300",
+      "einheit": "mg/l",
+      "grenzwert_max": 0.200
+    },
+    "Mangan_Mn": {
+      "wert": "<0.0100",
+      "einheit": "mg/l",
+      "grenzwert_max": 0.050
+    },
+    "Natrium_Na": {
+      "wert": 11.9,
+      "einheit": "mg/l",
+      "grenzwert_max": 200
+    },
+    "Kalium_K": {
+      "wert": 2.2,
+      "einheit": "mg/l"
+    },
+    "Koloniebildende_Einheiten_22C": {
+      "wert": 4,
+      "einheit": "KBE/ml",
+      "grenzwert_max": 100
+    },
+    "Koloniebildende_Einheiten_37C": {
+      "wert": 0,
+      "einheit": "KBE/ml",
+      "grenzwert_max": 20
+    },
+    "Escherichia_coli": {
+      "wert": 0,
+      "einheit": "KBE/100ml",
+      "grenzwert_max": 0
+    },
+    "Coliforme_Bakterien": {
+      "wert": 0,
+      "einheit": "KBE/100ml",
+      "grenzwert_max": 0
+    },
+    "Intestinale_Enterokokken": {
+      "wert": 0,
+      "einheit": "KBE/100ml",
+      "grenzwert_max": 0
+    }
+  }
+}
+
