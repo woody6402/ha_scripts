@@ -1,0 +1,305 @@
+type: grid
+square: false
+columns: 12
+cards:
+  - type: heading
+    icon: mdi:thermometer-water
+    heading: Baden Wasserqualität
+    heading_style: title
+    badges:
+      - type: entity
+        entity: sensor.wasserwerte_baden_cli_rohdaten
+    tap_action:
+      action: url
+      url_path: >-
+        https://www.baden.at/system/web/getDocument.ashx?fileid=3613331&cts=1769586297&name=Gutachten%20der%20Wasserwerte%20vom%2025.11.2025
+  - type: tile
+    entity: sensor.wasser_temperatur
+    name: Temperatur
+    icon: mdi:thermometer
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_ph
+    name: pH-Wert
+    icon: mdi:water-percent
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    grid_options:
+      columns: 6
+      rows: 1
+    entity: sensor.wasser_kbe_22degc
+    name: KBE (22°C)
+    icon: mdi:water-outline
+    vertical: false
+    tap_action:
+      action: more-info
+    features_position: bottom
+  - type: tile
+    grid_options:
+      columns: 6
+      rows: 1
+    entity: sensor.wasser_kbe_37degc
+    name: KBE (37°C)
+    icon: mdi:water-outline
+    vertical: false
+    tap_action:
+      action: more-info
+    features_position: bottom
+  - type: tile
+    grid_options:
+      columns: 6
+      rows: 1
+    entity: sensor.coliforme_bakterien_2
+    name: Coliforme Bakterien
+    icon: mdi:biohazard
+    vertical: false
+    tap_action:
+      action: more-info
+    features_position: bottom
+  - type: tile
+    grid_options:
+      columns: 6
+      rows: 1
+    entity: sensor.escherichia_coli_2
+    name: Escherichia coli
+    icon: mdi:biohazard
+    vertical: false
+    tap_action:
+      action: more-info
+    features_position: bottom
+  - type: tile
+    grid_options:
+      columns: 6
+      rows: 1
+    entity: sensor.enterokokken_2
+    name: Enterokokken
+    icon: mdi:biohazard
+    vertical: false
+    tap_action:
+      action: more-info
+    features_position: bottom
+  - type: tile
+    entity: sensor.wasser_leitfahigkeit
+    name: Elektrische Leitfähigkeit
+    icon: mdi:flash
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_gesamtharte
+    name: Gesamthärte
+    icon: mdi:water-percent
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_carbonatharte
+    name: Carbonathärte
+    icon: mdi:water-percent
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_calcium
+    name: Calcium (mg/l)
+    icon: mdi:shaker
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_magnesium
+    name: Magnesium (mg/l)
+    icon: mdi:shaker
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_eisen
+    name: Eisen (mg/l)
+    icon: mdi:shaker
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_mangan
+    name: Mangan (mg/l)
+    icon: mdi:shaker
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_natrium
+    name: Natrium (mg/l)
+    icon: mdi:shaker
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_kalium
+    name: Kalium (mg/l)
+    icon: mdi:shaker
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_nitrat
+    name: Nitrat (mg/l)
+    icon: mdi:chemical-weapon
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_chlorid
+    name: Chlorid (mg/l)
+    icon: mdi:chemical-weapon
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_sulfat
+    name: Sulfat (mg/l)
+    icon: mdi:chemical-weapon
+    features_position: bottom
+    vertical: false
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_hydrogencarbonat
+    name: Hydrogencarbonat (mg/l)
+    icon: mdi:water
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_saurekapazitat_bis_ph_4_3
+    name: Säurekapazität (mmol/l)
+    icon: mdi:water-check
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_gesamtharte_mmol_l
+    name: Gesamthärte (mmol/l)
+    icon: mdi:water-percent
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_npoc
+    name: NPOC (mg/l)
+    icon: mdi:leaf
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_nitrit
+    name: Nitrit (mg/l)
+    icon: mdi:chemical-weapon
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_ammonium
+    name: Ammonium (mg/l)
+    icon: mdi:chemical-weapon
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_farbung
+    name: Färbung
+    icon: mdi:palette
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_geruch
+    name: Geruch
+    icon: mdi:smoke
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
+  - type: tile
+    entity: sensor.wasser_geschmack
+    name: Geschmack
+    icon: mdi:food
+    tap_action:
+      action: more-info
+    grid_options:
+      columns: 6
+      rows: 1
