@@ -1,0 +1,197 @@
+template:
+  - sensor:
+      - name: "Wasser Temperatur"
+        unique_id: wasser_temperatur
+        unit_of_measurement: "°C"
+        device_class: temperature
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Wassertemperatur').wert | float(0) }}"
+
+      - name: "Wasser pH"
+        unique_id: wasser_ph
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','pH_Wert').wert | float(0) }}"
+
+      - name: "Wasser Leitfähigkeit"
+        unique_id: wasser_leitfaehigkeit
+        unit_of_measurement: "µS/cm"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Leitfähigkeit').wert | float(0) }}"
+
+      - name: "Wasser Gesamthärte"
+        unique_id: wasser_gesamthaerte_dh
+        unit_of_measurement: "°dH"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Gesamthärte_dH').wert | float(0) }}"
+
+      - name: "Wasser Carbonathärte"
+        unique_id: wasser_carbonathaerte
+        unit_of_measurement: "°dH"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Carbonathärte').wert | float(0) }}"
+
+      - name: "Wasser Calcium"
+        unique_id: wasser_calcium
+        unit_of_measurement: "mg/l"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Calcium_Ca').wert | float(0) }}"
+
+      - name: "Wasser Magnesium"
+        unique_id: wasser_magnesium
+        unit_of_measurement: "mg/l"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Magnesium_Mg').wert | float(0) }}"
+
+      - name: "Wasser Eisen"
+        unique_id: wasser_eisen
+        unit_of_measurement: "mg/l"
+        state: >
+          {% set v = state_attr('sensor.wasserwerte_baden_cli_rohdaten','Eisen_Fe').wert %}
+          {{ (v|string|replace('<','')|trim) | float(0) }}
+
+      - name: "Wasser Mangan"
+        unique_id: wasser_mangan
+        unit_of_measurement: "mg/l"
+        state: >
+          {% set v = state_attr('sensor.wasserwerte_baden_cli_rohdaten','Mangan_Mn').wert %}
+          {{ (v|string|replace('<','')|trim) | float(0) }}
+
+      - name: "Wasser Natrium"
+        unique_id: wasser_natrium
+        unit_of_measurement: "mg/l"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Natrium_Na').wert | float(0) }}"
+
+      - name: "Wasser Kalium"
+        unique_id: wasser_kalium
+        unit_of_measurement: "mg/l"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Kalium_K').wert | float(0) }}"
+
+      - name: "Wasser Nitrat"
+        unique_id: wasser_nitrat
+        unit_of_measurement: "mg/l"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Nitrat').wert | float(0) }}"
+
+      - name: "Wasser Nitrit"
+        unique_id: wasser_nitrit
+        unit_of_measurement: "mg/l"
+        state: >
+          {% set v = state_attr('sensor.wasserwerte_baden_cli_rohdaten','Nitrit').wert %}
+          {{ (v|string|replace('<','')|trim) | float(0) }}
+
+      - name: "Wasser Ammonium"
+        unique_id: wasser_ammonium
+        unit_of_measurement: "mg/l"
+        state: >
+          {% set v = state_attr('sensor.wasserwerte_baden_cli_rohdaten','Ammonium').wert %}
+          {{ (v|string|replace('<','')|trim) | float(0) }}
+
+      - name: "Wasser Chlorid"
+        unique_id: wasser_chlorid
+        unit_of_measurement: "mg/l"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Chlorid_Cl').wert | float(0) }}"
+
+      - name: "Wasser Sulfat"
+        unique_id: wasser_sulfat
+        unit_of_measurement: "mg/l"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Sulfat').wert | float(0) }}"
+
+      - name: "Wasser KBE 22°C"
+        unique_id: wasser_kbe_22
+        unit_of_measurement: "KBE/ml"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Koloniebildende_Einheiten_22C').wert | int(0) }}"
+
+      - name: "Wasser KBE 37°C"
+        unique_id: wasser_kbe_37
+        unit_of_measurement: "KBE/ml"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Koloniebildende_Einheiten_37C').wert | int(0) }}"
+
+      - name: "Coliforme Bakterien"
+        unique_id: wasser_coliforme
+        unit_of_measurement: "KBE/100ml"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Coliforme_Bakterien').wert | int(0) }}"
+
+      - name: "Escherichia coli"
+        unique_id: wasser_ecoli
+        unit_of_measurement: "KBE/100ml"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Escherichia_coli').wert | int(0) }}"
+
+      - name: "Enterokokken"
+        unique_id: wasser_enterokokken
+        unit_of_measurement: "KBE/100ml"
+        state: "{{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Intestinale_Enterokokken').wert | int(0) }}"
+
+      - name: "Wasser Färbung"
+        unique_id: wasser_faerbung
+        state: >
+          {{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Färbung').wert }}
+
+      - name: "Wasser Geruch"
+        unique_id: wasser_geruch
+        state: >
+          {{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Geruch').wert }}
+
+      - name: "Wasser Geschmack"
+        unique_id: wasser_geschmack
+        state: >
+          {{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Geschmack').wert }}
+
+      - name: "Wasser Säurekapazität (bis pH 4.3)"
+        unique_id: wasser_saurekapazitat_bis_ph_4_3
+        unit_of_measurement: "mmol/l"
+        state: >
+          {{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Säurekapazität_bis_pH_4_3').wert | float(0) }}
+
+      - name: "Wasser Hydrogencarbonat"
+        unique_id: wasser_hydrogencarbonat
+        unit_of_measurement: "mg/l"
+        state: >
+          {{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Hydrogencarbonat').wert | float(0) }}
+
+      - name: "Wasser Gesamthärte (mmol/l)"
+        unique_id: wasser_gesamthaerte_mmol_l
+        unit_of_measurement: "mmol/l"
+        state: >
+          {{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','Gesamthärte_mmol_l').wert | float(0) }}
+
+      - name: "Wasser NPOC"
+        unique_id: wasser_npoc
+        unit_of_measurement: "mg/l"
+        state: >
+          {{ state_attr('sensor.wasserwerte_baden_cli_rohdaten','NPOC').wert | float(0) }}
+
+          
+command_line:
+  - sensor:
+      name: "Wasserwerte Baden (CLI Rohdaten)"
+      unique_id: wasserwerte_baden_cli_rohdaten
+      command: "curl -sSL 'https://raw.githubusercontent.com/woody6402/ha_scripts/main/myscripts/baden_wasserwerte.json'"
+      scan_interval: 86400
+      value_template: "{{ value_json.Probe.ProbenahmeDatum }}"
+      json_attributes_path: "$.Messwerte"
+      json_attributes:
+        - Wassertemperatur
+        - pH_Wert
+        - Leitfähigkeit
+        - Färbung
+        - Geruch
+        - Geschmack
+        - Gesamthärte_mmol_l
+        - Gesamthärte_dH
+        - Carbonathärte
+        - Säurekapazität_bis_pH_4_3
+        - Hydrogencarbonat
+        - Calcium_Ca
+        - Magnesium_Mg
+        - NPOC
+        - Nitrat
+        - Nitrit
+        - Ammonium
+        - Chlorid_Cl
+        - Sulfat
+        - Eisen_Fe
+        - Mangan_Mn
+        - Natrium_Na
+        - Kalium_K
+        - Koloniebildende_Einheiten_22C
+        - Koloniebildende_Einheiten_37C
+        - Escherichia_coli
+        - Coliforme_Bakterien
+        - Intestinale_Enterokokken
+
+
+        
+        
+    
